@@ -1,220 +1,167 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 
-
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Home | Um mundo de aventuras</title>
-
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/323/323367.png">
-
     <link rel="stylesheet" href="Style/home.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+    
 </head>
-
-
 
 <body>
 
+    <div class="botao-flutuante animate__animated animate__bounceInLeft" data-bs-toggle="modal"
+        data-bs-target="#infoModal">i</div>
 
-
-    <div class="botao-flutuante">i</div>
-
-    <div class="balao-flutuante">Desenvolvido por Samuel Santos<br>Projeto Volta ao Mundo Copyright@2025</div>
-
-
-
-
-
-
-
-    <nav>
-
-        <img src="Images/LogoNav.png">
-
-
-
-        <h1>Austrália</h1>
-
-        <ul>
-
-            <li><a style="color: rgb(55, 55, 55); font-weight: 700;" href="index.html">Home</a></li>
-
-            <li><a href="Pages/sobre.html">Sobre</a></li>
-
-            <li><a href="Pages/cultura.html">Cultura Local</a></li>
-
-            <li><a href="Pages/sabores.html">Sabores</a></li>
-
-            <li><a href="Pages/explore.html">Explore</a></li>
-
-        </ul>
-
-    </nav>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg custom-nav animate__animated animate__fadeIn">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/128/323/323367.png" alt="Logo" height="35"
+                        class="me-2">
+                    <h1>Austrália</h1>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto gap-3">
+                        <li class="nav-item"><a class="nav-link fw-bold text-dark" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">SOBRE</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">CULTURA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">SABORES</a></li>
+                        <li class="nav-item"><a class="nav-link btn btn-outline-danger px-3 rounded-pill"
+                                href="#">EXPLORE</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
 
 
-    <div class="all">
+        <div class="container text-center my-5">
+            <div class="position-relative d-inline-block">
 
-        <div style="pointer-events: none; user-select: none;">
+                <img class="foco-mapa img-fluid"
+                    src="https://static.vecteezy.com/ti/vetor-gratis/p1/3668495-doodle-freehand-drawing-of-australia-map-gratis-vetor.jpg"
+                    alt="Mapa Austrália" style="opacity: 0.1;">
 
-            <img class="foco"
-                src="https://static.vecteezy.com/ti/vetor-gratis/p1/3668495-doodle-freehand-drawing-of-australia-map-gratis-vetor.jpg">
-
-        </div>
-
-
-
-        <h1>
-
-            This is<span class="typing"> </span>
-
-        </h1>
-
-
-
-        <div class="container">
-
-            <div class="card1" data-aos="fade-right" data-aos-duration="1000">
-
-                <img
-                    src="https://australiancentre.com.br/wp-content/uploads/2020/06/original-95ba7bf3b1d31497abc528a3805ad2f0-768x512.jpeg">
+                <div class="position-absolute top-50 start-50 translate-middle w-100">
+                    <h1 class="typing-box m-0">
+                        This is <span class="typing"></span>
+                    </h1>
+                </div>
 
             </div>
+        </div>
 
-
-
-            <div class="card2" data-aos="fade-left" data-aos-duration="1000">
-
-                <h2>A Austrália, vasta ilha-continente, mescla desertos, florestas e praias. Lar de culturas aborígenes
-
+        <div class="row align-items-center g-5 mt-24 pb-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <img src="https://australiancentre.com.br/wp-content/uploads/2020/06/original-95ba7bf3b1d31497abc528a3805ad2f0-768x512.jpeg"
+                    class="img-fluid card1-img" alt="Austrália">
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <h2 class="h5 fw-semibold text-justify mb-4" style="line-height: 1.8;">
+                    A Austrália, vasta ilha-continente, mescla desertos, florestas e praias. Lar de culturas aborígenes
                     milenares, foi colonizada pelos britânicos e hoje é uma nação multicultural com cidades vibrantes e
-
                     natureza única, incluindo a Grande Barreira de Corais e o Uluru. Cangurus e coalas são símbolos de
-
-                    sua biodiversidade singular. O estilo de vida é descontraído, com forte ligação com o ar livre e
-
-                    esportes. Em suma, a Austrália encanta pela diversidade natural e cultural.</h2>
-
-
-
-                <a class="saibamais" href="https://pt.m.wikipedia.org/wiki/Austr%C3%A1lia" target="_blank">SAIBA MAIS
-
-                    ➜</a>
-
+                    sua biodiversidade singular.
+                </h2>
+                <a class="btn btn-outline-dark w-100 shadow-sm" href="https://pt.m.wikipedia.org/wiki/Austr%C3%A1lia"
+                    target="_blank">
+                    SAIBA MAIS ➜
+                </a>
             </div>
-
         </div>
-
-
-
 
 
     </div>
 
-</body>
+    <footer class="py-5 mt-5">
+        <div class="container text-center">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+                <div class="col">
+                    <h5 class="fw-bold">Projeto</h5>
+                    <p class="small text-muted">Explorando as maravilhas do mundo.</p>
+                </div>
+                <div class="col">
+                    <h5 class="fw-bold">Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://policies.google.com/privacy?hl=pt-BR" target="_blank" class="nav-link p-0 text-muted">Privacidade</a></li>
+                        <li class="nav-item mb-2"><a href="https://policies.google.com/terms?hl=pt-BR" target="_blank" class="nav-link p-0 text-muted">Termos</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h5 class="fw-bold">Créditos</h5>
+                    <p class="small text-muted">Desenvolvido por Samuel Santos</p>
+                </div>
+                <div class="col">
+                    <h5 class="fw-bold">Siga-nos</h5>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a style="text-decoration: none;" href="https://instagram.com/australia" target="_blank"><span class="badge bg-dark">IG</span></a> 
+                         <a style="text-decoration: none;" href="https://github.com/australia" target="_blank"><span class="badge bg-dark">GH</span>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="text-muted mb-0">&copy; 2026 Volta ao Mundo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
+    <div class="modal fade" id="infoModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">Informações do Projeto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center p-4">
+                    <img src="https://cdn-icons-png.flaticon.com/128/323/323367.png" height="60" class="mb-3">
+                    <p><strong>Desenvolvido por:</strong> Samuel Santos</p>
+                    <p class="text-muted">Projeto focado em demonstrar a beleza e cultura da Austrália utilizando
+                        tecnologias modernas.</p>
+                    <div class="alert alert-info py-2 small">Copyright @ 2026 - Volta ao Mundo</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        document.addEventListener('contextmenu', e => e.target.tagName === 'IMG' && e.preventDefault());
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        // Typing Effect
+        const words = ["Sydney Opera House", "Great Barrier Reef", "Kangaroo Country", "Land of Sunshine"];
+        const typingElement = document.querySelector(".typing");
+        let wordIndex = 0, charIndex = 0, isDeleting = false;
 
-<script>
-
-    AOS.init();
-
-</script>
-
-
-
-<script>
-
-    document.addEventListener('contextmenu', function (e) {
-
-        if (e.target.tagName === 'IMG') {
-
-            e.preventDefault();
-
-        }
-
-    });
-
-</script>
-
-
-
-
-
-
-
-<script>
-
-    const words = ["Sydney Opera House   ", "Great Barrier Reef  ", "Kangaroo Country    ", "Land of Sunshine    "];
-
-    const typingElement = document.querySelector(".typing");
-
-    let wordIndex = 0;
-
-    let charIndex = 0;
-
-    let isDeleting = false;
-
-
-
-    function typeEffect() {
-
-        const currentWord = words[wordIndex];
-
-        const displayedText = currentWord.slice(0, charIndex);
-
-
-
-        typingElement.textContent = displayedText;
-
-
-
-        if (!isDeleting && charIndex < currentWord.length) {
-
-            charIndex++;
-
-            setTimeout(typeEffect, 80);
-
-        } else if (isDeleting && charIndex > 0) {
-
-            charIndex--;
-
-            setTimeout(typeEffect, 50);
-
-        } else {
-
-            isDeleting = !isDeleting;
-
-            if (!isDeleting) {
-
-                wordIndex = (wordIndex + 1) % words.length;
-
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+            typingElement.textContent = currentWord.slice(0, charIndex);
+            if (!isDeleting && charIndex < currentWord.length) {
+                charIndex++;
+                setTimeout(typeEffect, 100);
+            } else if (isDeleting && charIndex > 0) {
+                charIndex--;
+                setTimeout(typeEffect, 50);
+            } else {
+                isDeleting = !isDeleting;
+                if (!isDeleting) wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(typeEffect, 1200);
             }
-
-            setTimeout(typeEffect, 1000);
-
         }
-
-    }
-
-
-
-    typeEffect();
-</script>
-
-
+        typeEffect();
+    </script>
+</body>
 
 </html>
