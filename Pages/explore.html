@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore | Tesouros Naturais e Urbanos</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/323/323367.png">
+    <link rel="stylesheet" href="../Style/explore.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+
+    <div class="botao-flutuante">i</div>
+    <div class="balao-flutuante">Desenvolvido por Samuel Santos<br>Projeto Volta ao Mundo Copyright@2025</div>
+
+    <nav>
+        <img src="../Images/LogoNav.png">
+        <h1>Austrália</h1>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="cultura.html">Cultura Local</a></li>
+            <li><a href="sabores.html">Sabores</a></li>
+            <li><a style="color: rgb(11, 94, 0); font-weight: 700;" href="explore.html">Explore</a></li>
+        </ul>
+    </nav>
+
+    <div id="text">
+        <h2>From the beaches to the outback,</h2>
+        <h1>AUSTRÁLIA</h1>
+        <img src="../Images/landscape.jpg" id="textimg">
+    </div>
+
+    <div class="all">
+        <section class="cont">
+            <section class="content-section" data-aos="fade-up" data-aos-delay="100">
+                <h2>🏝️ Maravilhas Naturais</h2>
+                <h3>Grande Barreira de Coral</h3>
+                <p>O maior sistema de recifes de coral do mundo, abrigando uma infinidade de vida marinha e paisagens
+                    subaquáticas deslumbrantes.</p>
+                <h3>Uluru (Ayers Rock)</h3>
+                <p>Este monólito de arenito é um símbolo cultural e espiritual para os povos aborígines e uma das
+                    atrações mais icônicas do deserto australiano.</p>
+                <h3>Great Ocean Road</h3>
+                <p>Uma das rotas costeiras mais famosas do mundo, com vistas espetaculares de praias, falésias e
+                    monumentos naturais como os Doze Apóstolos.</p>
+                <h3>Blue Mountains</h3>
+                <p>Famosa por suas formações rochosas e trilhas desafiadoras, a região é um paraíso para os aventureiros
+                    e amantes da natureza.</p>
+                <h3>Kakadu National Park</h3>
+                <p>Este parque oferece uma mistura de paisagens selvagens e importantes sítios culturais aborígines, com
+                    fauna e flora únicas.</p>
+            </section>
+
+            <section class="content-section" data-aos="fade-up" data-aos-delay="100">
+                <h2>🏙️ Cidades Vibrantes</h2>
+                <h3>Sydney</h3>
+                <p>Famosa pelo Opera House, Harbour Bridge e Bondi Beach, Sydney é uma cidade cosmopolita cheia de vida
+                    e atividades ao ar livre.</p>
+                <h3>Melbourne</h3>
+                <p>A capital cultural da Austrália, famosa por sua arte de rua, cultura vibrante e paixão pelo esporte.
+                </p>
+                <h3>Brisbane</h3>
+                <p>Com clima tropical e belas vistas do rio, Brisbane é a porta de entrada para as praias e parques
+                    naturais do estado de Queensland.</p>
+                <h3>Perth</h3>
+                <p>Localizada na costa oeste, Perth é famosa por suas praias paradisíacas e seu isolamento geográfico
+                    único.</p>
+            </section>
+
+            <section class="content-section" data-aos="fade-up" data-aos-delay="100">
+                <h2>🌟 Experiências Únicas</h2>
+                <p>Aventuras como mergulho na Grande Barreira de Coral, trilhas pelo Outback, e observação de vida
+                    selvagem tornam a Austrália um destino inesquecível.</p>
+            </section>
+        </section>
+    </div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+
+    const section = document.querySelector('.cont');
+    const textHeader = document.getElementById('textimg');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                textHeader.classList.add('hide-background');
+            } else {
+                textHeader.classList.remove('hide-background');
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    observer.observe(section);
+</script>
+
+
+
+</html>
