@@ -1,76 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 body {
-    font-family: 'Poppins';
-    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg,
+            rgba(64, 0, 0, 0.1) 0%,
+            rgba(255, 255, 255, 1) 15%,
+            rgba(255, 255, 255, 1) 85%,
+            rgba(8, 0, 59, 0.1) 100%);
     background-attachment: fixed;
-    scroll-behavior: smooth;
+    min-height: 100vh;
+
 }
 
-nav {
-    background-color: rgb(246, 246, 246);
-    width: 95%;
-    height: 60px;
-    margin: 2% 2.5%;
-    border-radius: 30px;
-    box-shadow: 0px 0px 10px rgb(143, 143, 143);
-    display: flex;
-    animation: fadeIn;
-    animation-duration: 1s;
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 90%;
+    }
 }
 
-nav img {
-    margin: 13px 40px 13px 70px;
+.custom-nav {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 0.8rem 2rem;
+    z-index: 2000 !important;
 }
 
-nav h1 {
+.navbar-brand h1 {
     font-size: 22px;
-    margin: 14px 100px 14px 0px;
-    text-decoration: underline dotted rgb(255, 0, 0) 2px;
-    text-underline-offset: 4px;
-    transition: 0.5s;
-    font-weight: 600;
-}
-
-nav h1:hover {
-    transform: scale(1.05);
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    margin-left: 30%;
-    gap: 40px;
-}
-
-nav ul li a {
-    color: rgb(97, 97, 97);
-    font-size: 17px;
-    font-weight: 500;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: black;
-    text-decoration: underline dotted rgb(0, 102, 5) 2.5px;
-    text-underline-offset: 3px;
+    margin: 0;
+    font-weight: 700;
+    text-decoration: underline dotted red 2px;
 }
 
 #text {
-    margin-top: 100px;
-    font-family: "Poppins";
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 170px;
     color: white;
+    position: relative;
+    z-index: 1;
+    padding-top: 80px;
 }
 
-#textimg.hide-background {
-    opacity: 0;
-}
-#textimg{
-    width: 100%;    
+#textimg {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
     transition: opacity 0.8s ease;
     position: fixed;
     top: 0;
@@ -78,136 +57,63 @@ nav ul li a:hover {
     z-index: -1;
 }
 
+#textimg.hide-background {
+    opacity: 0;
+}
+
 #text h2 {
     font-weight: 600;
-    font-size: 75px;
-    text-shadow: 10px 10px 50px rgba(0, 0, 0, 0.877);
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 #text h1 {
-    font-size: 110px;
     font-weight: 900;
-    text-shadow: 10px 10px 50px rgba(0, 0, 0, 0.87);
+    font-size: clamp(3rem, 12vw, 7rem);
+    text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.8);
 }
 
-.botao-flutuante {
-    animation: bounceInLeft;
-    animation-duration: 1s;
-    position: fixed;
-    top: 70%;
-    left: -115px;
-    background-color: #000000;
-    color: white;
-    border-radius: 20px;
-    width: 140px;
-    height: 40px;
-    padding-right: 15px;
-    text-align: right;
-    line-height: 40px;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.balao-flutuante {
-    position: fixed;
-    z-index: 1000;
-    left: 60px;
-    top: 69%;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    border-radius: 15px;
-    font-size: 14px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-.botao-flutuante:hover+.balao-flutuante {
-    opacity: 1;
-    visibility: visible;
-}
-
-.balao-flutuante::before {
-    content: '';
-    position: absolute;
-    left: -10px;
-    top: 50%;
-    transform: translateY(-50%);
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 10px solid #333;
-}
 .all {
-    font-family: 'Poppins';
-    padding: 0% 20%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+    margin-top: 50px;
 }
 
 .content-section {
-    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
-    padding: 40px 50px;
+    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+    padding: 40px;
     border-radius: 18px;
-    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s ease;
-    border-left: 6px solid #146b61;
-    position: relative;
-    overflow: hidden;
-    margin-top: 20px;
-}
-
-.content-section::before {
-    content: "";
-    position: absolute;
-    top: -40px;
-    right: -40px;
-    width: 120px;
-    height: 120px;
-    background: rgba(20, 107, 97, 0.1);
-    border-radius: 50%;
-    z-index: 0;
-    
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.4s;
+    margin-bottom: 40px;
 }
 
 .content-section:hover {
-    transform: translateY(-6px);    
-    border-left: 6px solid #0b4d45;
-    box-shadow: 0 25px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 .content-section h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 25px;
     color: #204e4a;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
 }
 
-.content-section h2::before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    background: #e9b949;
-    border-radius: 50%;
+.botao-flutuante {
+    position: fixed;
+    top: 100px;
+    left: -90px;
+    background: #000;
+    color: #fff;
+    width: 140px;
+    height: 45px;
+    border-radius: 0 25px 25px 0;
+    text-align: right;
+    padding-right: 20px;
+    line-height: 45px;
+    cursor: pointer;
+    z-index: 1050;
+    transition: 0.3s;
 }
 
-.content-section h3 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-top: 25px;
-    color: #2a2f45;
-}
-
-.content-section p {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: #555;
-    margin-top: 5px;
+.botao-flutuante:hover {
+    left: -80px;
 }
