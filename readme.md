@@ -50,4 +50,4 @@ O projeto foi construído utilizando as seguintes ferramentas:
 > "Projeto focado em demonstrar a beleza e cultura da Austrália utilizando tecnologias modernas."
 
 ---
-*Copyright © 2026 - Volta ao Mundo*
+Copyright © 2026 - Volta ao Mundo
